@@ -1,0 +1,13 @@
+[Service]
+ExecStart=/usr/bin/node server/server.js
+WorkingDirectory=/home/example/example
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=example
+User=example
+Group=example
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
